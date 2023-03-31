@@ -19,17 +19,17 @@ export default {
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred": "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
-        "mobile-home": "url('./assets/image/HomePageGraphic.png')"
+        "mobile-home": "url('./assets/images/HomePageGraphic.png')"
       }),
       fontFamily:{
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"]
       },
       content: {
-        evolvetext: "url('./assets/image/EvolveText.png')",
-        abstractwaves: "url('./assets/image/AbstractWaves.png')",
-        sparkles: "url('./assets/image/Sparkles.png')",
-        circles: "url('./assets/image/Circles.png')",
+        evolvetext: "url('./assets/images/EvolveText.png')",
+        abstractwaves: "url('./assets/images/AbstractWaves.png')",
+        sparkles: "url('./assets/images/Sparkles.png')",
+        circles: "url('./assets/images/Circles.png')",
       }
     },
     screens: {

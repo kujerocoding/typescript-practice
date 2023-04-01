@@ -19,16 +19,19 @@ const Home = ({setSelectedPage}: Props) => {
   return (
     <section id='home' className='gap-16 bg-gray-20 py-10 md:h-full md:pb-0'>
       {/* HEADER AND IMAGE */}
-      <div>
+      <div className='md:flex mx-auto w-5/6 items-center justify-center md:h-5/6'>
         {/* MAIN HEADER*/}
         <div>
           {/* HEADER */}
           <div>
               <div>
-                <img src={HomePageText} alt="home-page-text" />
+                <div>
+                  <img src={HomePageText} alt="home-page-text" />
+                </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus itaque quas iure ipsam. Ea autem neque dolorum, est dolorem blanditiis.
+                  </p>
               </div>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus itaque quas iure ipsam. Ea autem neque dolorum, est dolorem blanditiis.</p>
+            </div>
         </div>
         {/* ACTIONS */}
         <div>
@@ -41,7 +44,24 @@ const Home = ({setSelectedPage}: Props) => {
             <p>Learn More</p>
           </AnchorLink>
         </div>
+         {/* IMAGE */}
+        <div>
+          <img src={HomePageGraphic} alt="home-pageGraphic" />
+        </div>
       </div>
+      {/* SPONSORS */}
+      {isAboveMediumScreens && (
+        <div>
+            <div>
+              <div>
+                <img src={SponsorRedBull} alt="redbull-sponsor" />
+                <img src={SponsorForbes} alt="forbes-sponsor" />
+                <img src={SponsorFortune} alt="fortune-sponsor" />
+              </div>
+            </div>
+        </div>
+      )}
+     
     </section>
   )
 }

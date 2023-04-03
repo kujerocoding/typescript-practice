@@ -8,6 +8,8 @@ import SponsorRedBull from '@/assets/images/SponsorRedBull.png'
 import SponsorForbes from '@/assets/images/SponsorForbes.png'
 import SponsorFortune from '@/assets/images/SponsorFortune.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { motion } from 'framer-motion'
+
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
@@ -22,19 +24,19 @@ const Home = ({setSelectedPage}: Props) => {
       <div className='md:flex mx-auto w-5/6 items-center justify-center md:h-5/6'>
         {/* MAIN HEADER*/}
         <div className='z-10 mt-32 md:basis-3/5'>
-          {/* HEADER */}
-          <div className='md:-mt-20'>
+          {/* HEADINGS */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{once: true, amount: 0.5}} transition={{duraiton: 0.5}} variants={{hidden: {opacity: 0, x:-50}, visible: {opacity: 1, x:0}}} className='md:-mt-20'>
               <div className='relative'>
-                <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1] before:content-evolvetext'>
+                <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext'>
                   <img src={HomePageText} alt="home-page-text" />
                 </div>
                   <p className='mt-8 text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus itaque quas iure ipsam. Ea autem neque dolorum, est dolorem blanditiis.
                   </p>
               </div>
-            </div>
+            </motion.div>
         </div>
         {/* ACTIONS */}
-        <div className='mt-8 flex items-center gap-8 md:justify-start'>
+        <motion.div initial="hidden" whileInView="visible" viewport={{once: true, amount: 0.5}} transition={{delay: 0.2, duration: 0.5}} variants={{hidden: {opacity: 0, x:-50}, visible: {opacity: 1, x:0}}} className='mt-8 flex items-center gap-8 md:justify-start'>
           <ActionButton setSelectedPage={setSelectedPage}>
             Join Now
           </ActionButton>
@@ -43,7 +45,7 @@ const Home = ({setSelectedPage}: Props) => {
           href={`${SelectedPage.ContactUs}`}>
             <p>Learn More</p>
           </AnchorLink>
-        </div>
+        </motion.div>
          {/* IMAGE */}
         <div className='flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-end'>
           <img src={HomePageGraphic} alt="home-pageGraphic" />

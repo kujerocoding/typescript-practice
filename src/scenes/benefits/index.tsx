@@ -75,17 +75,29 @@ const Benefits = ({setSelectedPage}: Props) => {
           {/* TITLE */}
           <div className="relative">
             <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] before:content-abstractwaves">
-                <div>
+                <motion.div 
+                  initial="hidden" 
+                  whileInView="visible" 
+                  viewport={{once: true, amount: 0.5}} 
+                  transition={{duration: 0.5}} 
+                  variants={{hidden: {opacity: 0, x:50}, visible: {opacity: 1, x:0}}}
+                >
                   <Htext>MILLIONS OF HAPPY MEMBERS GETTING{" "}
                   <span className="text-primary-500">FIT</span></Htext>
-                </div>
+                </motion.div>
             </div>
           </div>
           {/* DESCRIPTION */}
-          <div>
+          <motion.div 
+            initial="hidden" 
+            whileInView="visible" 
+            viewport={{once: true, amount: 0.5}} 
+            transition={{delay: 0.2, duration: 0.5}} 
+            variants={{hidden: {opacity: 0, x:50}, visible: {opacity: 1, x:0}}}
+          >
             <p className="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt aperiam numquam aliquam doloribus rem inventore perferendis alias officiis illum odio sit unde enim excepturi, error sint, deleniti eligendi quam dolor quasi sed aliquid? Vel inventore dolorem aliquam beatae veniam ratione ea illo eum, provident deserunt distinctio consequatur fuga consequuntur?</p>
             <p className="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique maxime vero unde dolore aut repudiandae fugit cumque aliquid, culpa itaque reprehenderit eum quis ratione dolores nemo omnis placeat accusantium sequi! Non dolores voluptatibus porro magni in consequuntur illum laboriosam culpa.</p>
-          </div>
+          </motion.div>
           {/* BUTTON */}
           <div className="relative mt-16">
             <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
